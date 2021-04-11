@@ -17,12 +17,12 @@ public class FieldUtil {
     public static final String xposedClassKey = "__xposed__class__";
     public static final String xposedFilterHint = "__xposed__filter__";
 
-    public static String hashmapToJson(Map<Object, Object> hashMap) {
+    public static String hashMapToJson(Map<Object, Object> hashMap) {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         for (Map.Entry entry : hashMap.entrySet()) {
             if (entry.getValue() instanceof Map) {
-                sb.append("\"" + entry.getKey() + "\":" + hashmapToJson((Map<Object, Object>) entry.getValue()));
+                sb.append("\"" + entry.getKey() + "\":" + hashMapToJson((Map<Object, Object>) entry.getValue()));
             } else {
                 sb.append("\"" + entry.getKey() + "\":\"" + ((entry.getValue() != null && !entry.getKey().toString().startsWith("__xposed")) ? entry.getValue().getClass()+" ... " : "") + entry.getValue() + "\"");
             }

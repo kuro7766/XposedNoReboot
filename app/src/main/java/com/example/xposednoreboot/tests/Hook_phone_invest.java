@@ -38,7 +38,7 @@ public class Hook_phone_invest {
                                 HashMap hashMap = FieldUtil.getVariableHashMapByDepth(activity, 3, true);
 //                        Log.d(TAG, "beforeHookedMethod: "+hashMap.toString());
                                 Log.d(TAG, "beforeHookedMethod: pre");
-                                new FileOperator("/sdcard/hookv.txt").write(FieldUtil.hashmapToJson(hashMap));
+                                new FileOperator("/sdcard/hookv.txt").write(FieldUtil.hashMapToJson(hashMap));
 //                                Object currentEntity = FieldUtil.get(a, "currentEntity");
 //                                Log.d(TAG, "beforeHookedMethod: " + currentEntity);
 //                                FieldUtil.set(currentEntity, "activityId", unJoin);
