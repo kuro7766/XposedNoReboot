@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.xposednoreboot.tests.Hook_Kuan;
 import com.example.xposednoreboot.tests.Hook_dao_meng_kong_jian;
 import com.example.xposednoreboot.tests.Hook_phone_invest;
 import com.example.xposednoreboot.tests.Hook_test0;
@@ -37,7 +38,8 @@ public class HookLogic implements IXposedHookLoadPackage, IXposedHookZygoteInit 
 //        Hook_web_socket.handleLoadPackage(loadPackageParam);
         Log.d(TAG, "handleLoadPackage: ");
 //        Hook_test0.handleLoadPackage(loadPackageParam);
-        Hook_phone_invest.handleLoadPackage(loadPackageParam);
+        Hook_Kuan.handleLoadPackage(loadPackageParam);
+//        Hook_phone_invest.handleLoadPackage(loadPackageParam);
 //        Log.d(TAG, "handleLoadPackage: " + loadPackageParam.packageName);
 //        if ("com.jingcai.apps.qualitydev".equals(loadPackageParam.packageName)) {
         if ("com.jingcai.apps.qualitydev".equals(loadPackageParam.packageName)) {
